@@ -1,0 +1,37 @@
+.card-container{
+    perspective: 1000px;
+}
+.card{
+    height: 500px;
+    background-color: blue;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.3s ease-in; 
+}
+.card:hover{ transform: rotateY(180deg); }
+
+.card-front{
+    font-size: 2em;
+    background-color: chocolate;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.card-back{
+    font-size: 2em;
+    background-color: rgb(97, 171, 18);
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+

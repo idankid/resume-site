@@ -1,0 +1,35 @@
+.main-container{
+  height: max-content;
+  width: max-content;
+  align-self: center;
+  justify-self: center;
+  font-size: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.main-image{
+  position: absolute;
+  height: 90vh;
+  bottom:0;
+  inset-inline-start: 0;
+  animation: image-grow 2s
+}
+
+@media only screen and (max-width: 760px) {
+  .main-image{
+    height:75vh;  
+  }
+
+  .main-container{
+    margin-top: 60px;
+    font-size: 28px;
+  }
+}
+@keyframes image-grow {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
