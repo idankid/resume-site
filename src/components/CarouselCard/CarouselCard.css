@@ -1,6 +1,5 @@
 .carousel-card-container {
-    width: calc(100%-40px);
-    height: 460px;
+    height: 45vh;
     background-color: lightblue;
     display: flex;
     flex-direction: column;

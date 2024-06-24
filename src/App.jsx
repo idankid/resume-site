@@ -13,7 +13,7 @@ function App() {
       <div className='main-Title'>
         Welcome to Kideckel.com
       </div>
-      <Carousel spacing={550} items={[ 
+      <Carousel spacing="28vw" items={[ 
         <CarouselCard title='title' info={[<SubSection/>, <SubSection/>]}/>, 
         <CarouselCard title='title' info={[<SubSection/>, <SubSection/>]}/>, 
         <CarouselCard title='title' info={[<SubSection/>, <SubSection/>]}/>, 

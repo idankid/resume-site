@@ -1,7 +1,9 @@
 .carousel-container{
-    width: 500px;
-    height: 500px;
-    perspective: 1000px;
+    width: 25vw;
+    height: 30vh;
+    perspective: 100rem;
+    position: absolute;
+    top:25vh
 }
 
 .carousel{

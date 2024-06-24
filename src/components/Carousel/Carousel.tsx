@@ -3,7 +3,7 @@ import "./Carousel.css";
 
 type CarouselProps = {
   items: any[];
-  spacing?: number;
+  spacing?: string;
 };
 
 export const Carousel: React.FC<CarouselProps> = (props: CarouselProps) => {
@@ -13,7 +13,7 @@ export const Carousel: React.FC<CarouselProps> = (props: CarouselProps) => {
   if (items?.length <= 0) return null;
 
   const angle = 360 / items.length;
-  const space = spacing ? spacing : 300;
+  const space = spacing ? spacing : "300px";
   return (
     <div className="carousel-container">
       <div className="carousel">
@@ -21,7 +21,7 @@ export const Carousel: React.FC<CarouselProps> = (props: CarouselProps) => {
           <div
             key={`carousel-item-${idx}`}
             style={{
-              transform: `rotateY(${idx * angle}deg) translateZ(${space}px)`,
+              transform: `rotateY(${idx * angle}deg) translateZ(${space})`,
             }}>
             {item}
           </div>
