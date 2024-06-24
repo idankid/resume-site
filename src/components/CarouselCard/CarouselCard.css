@@ -1,16 +1,25 @@
 .carousel-card-container {
-    width: 200px;
-    height: 300px;
+    width: calc(100%-40px);
+    height: 460px;
     background-color: lightblue;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    padding: 20px;
+    gap:10px;
   }
 
-img{
-    height: 100%;
-}
-  
+  .carousel-card-title{
+    font-size: 1.5em;
+    text-transform: capitalize;
+    width: 75%;
+    font-weight: 500;
+    border-bottom: 5px black solid;
+  }
+
+  .carousel-card-info{
+    gap: 10px;
+  }

@@ -1,11 +1,20 @@
 import React from "react";
 import "./CarouselCard.css";
-import idan from "../../assets/idan-png.png";
 
-export const CarouselCard: React.FC = () => {
+type CarouselCardProps = {
+  title: string;
+  info: any[];
+};
+
+export const CarouselCard: React.FC<CarouselCardProps> = (
+  props: CarouselCardProps
+) => {
+  const { title, info } = props;
+
   return (
     <div className="carousel-card-container">
-      <img src={idan} />
+      <div className="carousel-card-title">{title}</div>
+      <div className="carousel-card-info">{info.map((item) => item)}</div>
     </div>
   );
 };
