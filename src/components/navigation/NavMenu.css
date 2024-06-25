@@ -8,3 +8,16 @@
     width: 10vw;
     gap: 15px;
 }
+
+@media only screen and (max-width: 760px) {
+    .nav-menu-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        top:15%;
+        width: 100%;
+        inset-inline-end: unset;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+}

@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: start;
   font-size: 30px;
+  overflow: hidden;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -19,7 +20,8 @@
 
 @media only screen and (max-width: 760px) {
   .main-image{
-    height:75vh;  
+    height:9vh;  
+    top:0;
   }
 
   .main-container{

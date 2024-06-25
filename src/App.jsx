@@ -4,26 +4,24 @@ import './App.css'
 import { Carousel } from './components/Carousel/Carousel'
 import { CarouselCard } from './components/CarouselCard/CarouselCard'
 import { SubSection } from './components/subSection/SubSection'
-import { setNumber } from './redux/carousel.Slice'
-import { useDispatch } from 'react-redux'
 import { NavMenu } from './components/navigation/NavMenu'
 
 function App() {
-  const dispatch = useDispatch();
-  const [count, setCount] = useState(0)
+  const [spacing, setSpacing] = useState("28vw")
 
   useEffect(()=>{
-    dispatch(setNumber(count));
-  },[count])
+    console.log(window.innerWidth)
+    window.innerWidth > 760 ? setSpacing("28vw") : setSpacing("85vw")
+  },[window])
     
 
   return (
     <div className='main-container'>
-      <div onClick={()=>setCount(prev=>prev+5)} className='main-Title'>
+      <div className='main-Title'>
         Welcome to Kideckel.com
       </div>
       <NavMenu/>
-      <Carousel spacing="28vw" items={[ 
+      <Carousel spacing={spacing} items={[ 
         <CarouselCard title='title1' info={[<SubSection/>, <SubSection/>]}/>, 
         <CarouselCard title='title2' info={[<SubSection/>, <SubSection/>]}/>, 
         <CarouselCard title='title3' info={[<SubSection/>, <SubSection/>]}/>, 

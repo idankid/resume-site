@@ -20,3 +20,13 @@
 .nav-item-title{
     font-size: 0.8rem;
 }
+
+
+@media only screen and (max-width: 760px) {
+    .nav-item-container{
+        width: fit-content;
+        border-radius: 10px;
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.459);
+        margin: 3px;
+    }
+}
