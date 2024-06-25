@@ -17,8 +17,8 @@ function App() {
 
   return (
     <div className='main-container'>
-      <div className='main-Title'>
-        Welcome to Kideckel.com
+      <div className='main-title'>
+        Welcome to Idan Kideckel's Resume Site
       </div>
       <NavMenu/>
       <Carousel spacing={spacing} items={[ 
