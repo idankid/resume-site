@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Carousel.css";
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
 
 type CarouselProps = {
   items: any[];
@@ -8,15 +10,26 @@ type CarouselProps = {
 
 export const Carousel: React.FC<CarouselProps> = (props: CarouselProps) => {
   const { items, spacing } = props;
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const { number } = useSelector((state: RootState) => state.carousel);
 
   // if there are no items
   if (items?.length <= 0) return null;
 
   const angle = 360 / items.length;
   const space = spacing ? spacing : "300px";
+
+  /**
+   * when changing the number of the carousel page to it
+   */
+  useEffect(() => {
+    if (!carouselRef.current) return;
+    carouselRef.current.style.transform = `rotateY(${number * angle}deg)`;
+  }, [number, carouselRef]);
+
   return (
     <div className="carousel-container">
-      <div className="carousel">
+      <div className="carousel" ref={carouselRef}>
         {items?.map((item, idx) => (
           <div
             key={`carousel-item-${idx}`}

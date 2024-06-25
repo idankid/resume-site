@@ -11,7 +11,7 @@
 
 .main-image{
   position: absolute;
-  height: 90vh;
+  height: 70vh;
   bottom:0;
   inset-inline-start: 0;
   animation: image-grow 2s

@@ -1,0 +1,10 @@
+.nav-menu-container{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+    inset-inline-end: 0;
+    top:40%;
+    width: 10vw;
+    gap: 15px;
+}
