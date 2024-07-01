@@ -32,7 +32,7 @@ export const Carousel: React.FC<CarouselProps> = (props: CarouselProps) => {
   return (
     <div className="carousel-container">
       <div className="carousel" ref={carouselRef}>
-        {items?.reverse().map((item, idx) => (
+        {items?.map((item, idx) => (
           <div
             key={`carousel-item-${idx}`}
             style={{
