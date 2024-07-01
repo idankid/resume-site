@@ -11,7 +11,9 @@ type CarouselProps = {
 export const Carousel: React.FC<CarouselProps> = (props: CarouselProps) => {
   const { items, spacing } = props;
   const carouselRef = useRef<HTMLDivElement>(null);
-  const { number } = useSelector((state: RootState) => state.carousel);
+  const { number, direction } = useSelector(
+    (state: RootState) => state.carousel
+  );
 
   // if there are no items
   if (items?.length <= 0) return null;
@@ -24,13 +26,13 @@ export const Carousel: React.FC<CarouselProps> = (props: CarouselProps) => {
    */
   useEffect(() => {
     if (!carouselRef.current) return;
-    carouselRef.current.style.transform = `rotateY(${number * angle}deg)`;
+    carouselRef.current.style.transform = `rotateY(${-1 * number * angle}deg)`;
   }, [number, carouselRef]);
 
   return (
     <div className="carousel-container">
       <div className="carousel" ref={carouselRef}>
-        {items?.map((item, idx) => (
+        {items?.reverse().map((item, idx) => (
           <div
             key={`carousel-item-${idx}`}
             style={{

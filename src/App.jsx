@@ -5,9 +5,14 @@ import { Carousel } from './components/Carousel/Carousel'
 import { CarouselCard } from './components/CarouselCard/CarouselCard'
 import { SubSection } from './components/subSection/SubSection'
 import { NavMenu } from './components/navigation/NavMenu'
+import { Experience } from './info/experience/Experience'
+import { About } from './info/about/About'
+import { useSelector } from 'react-redux'
 
 function App() {
   const [spacing, setSpacing] = useState("28vw")
+
+  const {cards} = useSelector((state)=>state.carousel)
 
   useEffect(()=>{
     console.log(window.innerWidth)
@@ -21,15 +26,7 @@ function App() {
         Welcome to Idan Kideckel's Resume Site
       </div>
       <NavMenu/>
-      <Carousel spacing={spacing} items={[ 
-        <CarouselCard title='title1' info={[<SubSection/>, <SubSection/>]}/>, 
-        <CarouselCard title='title2' info={[<SubSection/>, <SubSection/>]}/>, 
-        <CarouselCard title='title3' info={[<SubSection/>, <SubSection/>]}/>, 
-        <CarouselCard title='title4' info={[<SubSection/>, <SubSection/>]}/>, 
-        <CarouselCard title='title5' info={[<SubSection/>, <SubSection/>]}/>, 
-        <CarouselCard title='title6' info={[<SubSection/>, <SubSection/>]}/>, 
-        <CarouselCard title='title7' info={[<SubSection/>, <SubSection/>]}/>, 
-        ]}/>
+      <Carousel spacing={spacing} items={cards.map((item, ind)=><item.value key={`main-card-${ind}`}/>)}/>
       <img className='main-image' src={idan}/>
     </div>
   )
