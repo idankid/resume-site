@@ -10,13 +10,13 @@ import { About } from './info/about/About'
 import { useSelector } from 'react-redux'
 
 function App() {
-  const [spacing, setSpacing] = useState("28vw")
+  const [spacing, setSpacing] = useState("23vw")
 
   const {cards} = useSelector((state)=>state.carousel)
 
   useEffect(()=>{
     console.log(window.innerWidth)
-    window.innerWidth > 760 ? setSpacing("28vw") : setSpacing("85vw")
+    window.innerWidth > 760 ? setSpacing("23vw") : setSpacing("80vw")
   },[window])
     
 

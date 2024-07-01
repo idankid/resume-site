@@ -18,8 +18,6 @@ const initialState = {
         {title:"Skill", value:Skills},
         {title:"Languages", value:Languages},
         {title:"Projects", value:Projects},
-        {title:"Experience", value:Experience},
-
     ]
 }
 
