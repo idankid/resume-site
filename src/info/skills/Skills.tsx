@@ -41,6 +41,13 @@ export const Skills: React.FC = () => {
       ],
     },
     {
+      title: "Environments:",
+      bulletPoints: [
+        "Linux",
+        "windows",
+      ],
+    },
+    {
       title: "Tools & Platforms",
       bulletPoints: ["Git/ GitHub", "Docker", "auth0", "ClickUp", "Sendgrid"],
     },

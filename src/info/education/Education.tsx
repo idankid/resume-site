@@ -8,6 +8,10 @@ import {
 export const Education: React.FC = () => {
   const info: SubSectionProps[] = [
     {
+      title:"Infinity Labs R&D",
+      bulletPoints:["specializing in c/c++"]
+    },
+    {
       title: "AZRIELI COLLEGE OF ENGINEERING, BS.C IN SOFTWARE ENGINEERING",
       bulletPoints: ["Final Avg: 88"],
     },
