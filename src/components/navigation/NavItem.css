@@ -9,6 +9,11 @@
     cursor: pointer;
     overflow: hidden;
     transition: all linear 0.3s;
+    user-select: none;      /* 🔒 prevents text selection */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
 }
 .nav-item-container:hover{
     transform: scale(1.3);

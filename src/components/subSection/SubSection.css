@@ -2,7 +2,7 @@
     border: 1px solid black;
     border-radius: 15px;
     padding: 5px;
-    width: 100%;
+    width: 96%;
 }
 .subsection-title{
     font-size: 1rem;
@@ -16,6 +16,7 @@
     font-size: 0.85rem;
     margin-inline-start: 0.5rem;
     gap: 5px;
+    
 }
 
 .dot-container{

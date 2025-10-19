@@ -27,4 +27,20 @@
     gap: 0.5rem;
     width: 100%;
     height: 100%;
+    
+    overflow-y: auto;
+    user-select: none; 
+    cursor: default;      
+    scrollbar-width: none; 
   }
+  
+  .carousel-card-info::-webkit-scrollbar {
+   display: none;                 /* Chrome, Safari, Opera */
+  }
+
+  .carousel-card-info::after {
+  content: '';
+  display: block;
+  height: 20px; /* bottom padding space */
+  flex-shrink: 0;
+}
