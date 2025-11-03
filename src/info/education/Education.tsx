@@ -8,8 +8,14 @@ import {
 export const Education: React.FC = () => {
   const info: SubSectionProps[] = [
     {
-      title:"Infinity Labs R&D",
-      bulletPoints:["specializing in c/c++"]
+      title: "Infinity Labs R&D",
+      bulletPoints: [
+        "Completed an intensive, industry-aligned training program focused on\
+        low-level programming and system programming, algorithm design, and real-world software\
+        engineering practices.\
+        The program emphasized technical agility, professional standards, and collaborative development;\
+         culminating in the ability to build complex, efficient, and scalable software systems.",
+      ],
     },
     {
       title: "AZRIELI COLLEGE OF ENGINEERING, BS.C IN SOFTWARE ENGINEERING",

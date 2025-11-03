@@ -19,18 +19,47 @@
 }
 
 .main-title{
-  margin-top: 50px;
+  margin-top: 20px;
+}
+
+#github-icon, #linkedin-icon
+{
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.icon-container
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 150px;
+  height: 60px;
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 760px) {
   .main-image{
     height:8.5vh;  
-    top:0;
+    top:10px;
     inset-inline-start: 45%;
   }
 
+  .icon-container
+  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    height: 60px;
+  }
+
   .main-container{
-    margin-top: 60px;
     font-size: 28px;
   }
 

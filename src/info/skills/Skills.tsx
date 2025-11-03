@@ -43,6 +43,8 @@ export const Skills: React.FC = () => {
     {
       title: "Protocols:",
       bulletPoints: [
+        "TCP",
+        "UDP",
         "HTTP",
         "HTTPS",
         "UART",

@@ -2,12 +2,10 @@ import { useEffect, useState } from "react";
 import idan from "./assets/idan-png.png";
 import "./App.css";
 import { Carousel } from "./components/Carousel/Carousel";
-import { CarouselCard } from "./components/CarouselCard/CarouselCard";
-import { SubSection } from "./components/subSection/SubSection";
 import { NavMenu } from "./components/navigation/NavMenu";
-import { Experience } from "./info/experience/Experience";
-import { About } from "./info/about/About";
 import { useSelector } from "react-redux";
+import Github from "./assets/github-icon.svg";
+import Linkedin from "./assets/linkedin-icon.svg";
 
 function App() {
   const [spacing, setSpacing] = useState("23vw");
@@ -21,6 +19,18 @@ function App() {
 
   return (
     <div className="main-container">
+      <div className="icon-container">
+        <img
+          src={Github}
+          id="github-icon"
+          onClick={() => window.open("https://github.com/idankid")}></img>
+        <img
+          src={Linkedin}
+          id="linkedin-icon"
+          onClick={() =>
+            window.open("https://www.linkedin.com/in/idan-kideckel-0b2890244/")
+          }></img>
+      </div>
       <div className="main-title">Welcome to Idan Kideckel's Resume Site</div>
       <NavMenu />
       <Carousel
